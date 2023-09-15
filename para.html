@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>PARAGRAPH</title>
+<style>
+#p1
+{
+background-color: rgb(254, 127, 0);
+position: absolute;
+left: 100px;
+top: 100px;
+z-Index: 40;
+width: 200px;
+height: 100px;
+}
+#p2
+{
+background-color: rgba(46, 199, 0, 0.775);
+position: absolute;
+left: 120px;
+top: 120px;
+z-Index: 40;
+width: 200px;
+height: 100px;
+}
+#p3
+{
+background-color: rgb(255, 255, 255);
+position: absolute;
+left: 110px;
+top: 110px;
+z-Index: 40;
+width: 200px;
+height: 100px;
+}
+</style>
+<script>
+function move(a){
+    let i;
+var p=document.getElementsByTagName("p");
+for(i=0;i<p.length;i++){
+p[i].style.zIndex=i+1;
+}
+a.style.zIndex=100;
+}
+</script>
+</head>
+<body>
+<p id="p1" onmouseover="move(this);">Para1</p>
+<p id="p2" onmouseover="move(this);">Para2</p>
+<p id="p3" onmouseover="move(this);">Para3</p>
+</body>
+</html>
