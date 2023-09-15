@@ -1,0 +1,61 @@
+vowel
+<!DOCTYPE html>
+<head>
+<title>vowel</title>
+</head>
+<body>
+<script type="text/javascript">
+let  pos,f=false;
+function fv()
+{
+var str=prompt("enter a string");
+str=str.toLocaleLowerCase();
+for(let i=0; str.length; i++)
+{
+if(str[i]=='a' || str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u')
+{
+    pos=i;
+    f=true;
+    break;
+}
+}
+if(pos<0)
+{
+    alert("not a vowel");
+//document.write("left most vowel position is"+(pos+1));
+}
+else
+{
+    alert("left most vowel position is"+(pos+1));
+
+//document.write("not a vowel");
+}
+}
+fv();
+</script>
+</body>
+</html>
+
+revsrse number
+<html>
+    <head>
+    <title>vowel</title>
+    </head>
+    <body>
+    <script type="text/javascript">
+    var rem, rev=0,n;
+    function frev()
+    {
+    n=prompt("enter a numeric data");
+    while(n>0)
+    {
+    rem=n%10;
+    rev=rev*10+rem;
+    n=parseInt(n/10);
+    }
+    alert("reversed number is"+rev);
+}
+frev();
+</script>
+</body>
+</html>
