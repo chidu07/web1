@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mypage</title>
+    <script src="p1.js">
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>Fruits Stall</h1>
+    <form>
+        <label for="apple" >Apple</label>
+        <input type="number" name="apple" id="apple" placeholder="entere the quantity">
+            <input type="checkbox" id="checked1" onclick="aclic()">
+            <br>
+            <br>
+
+
+            <label for="apple" >Orange</label>
+        <input type="number" name="apple" id="Orange" placeholder="entere the quantity">
+            <input type="checkbox" id="checked2" onclick="oclic()">
+            <br>
+            <br>
+
+            <label for="apple" >Bananan</label>
+        <input type="number" name="apple" id="Bananan" placeholder="entere the quantity">
+            <input type="checkbox" id="checked3" onclick="bclic()">
+        </inpi>
+    </form>
+    <br>
+    <br>
+    <button  onclick="cal()" id="bt">Total</button>
+</body>
+</html>
+
+
+js file
+
+function cal() {
+
+    let tot=0;
+    let a1 = aclic();
+    let b1 = oclic();
+    let c1= bclic();
+
+     tot = a1+ b1 + c1;
+
+    let tax = tot * 0.05;
+
+    //document.writeln("Total is:"+tot);
+    alert("total:" + (tot - tax));
+}
+
+
+
+function aclic() {
+    let a = document.getElementById("apple").value;
+    let c1 = document.getElementById("checked1");
+    let tot = 0;
+  
+   
+        if (c1.checked) {
+            tot += a * 59;
+            //alert("apple total:"+tot);
+        }
+
+    
+
+    return tot;
+    }
+
+
+function oclic() {
+    let b = document.getElementById("Orange").value;
+    let c2 = document.getElementById("checked2");
+
+    let tot = 0;
+
+
+        if (c2.checked) {
+            tot += b * 49;
+
+            //alert("orange total:"+tot);
+        }
+    
+
+    return tot;
+
+}
+
+function bclic() {
+    let c = document.getElementById("Bananan").value;
+    let c3 = document.getElementById("checked3");
+
+    let tot = 0;
+
+   
+        if (c3.checked) {
+            tot += c * 39;
+
+            //alert("banana total:"+tot);
+
+        }
+
+    
+    return tot;
+
+
+
+}
+
+
+
+
+
+
+
+
